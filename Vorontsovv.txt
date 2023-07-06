@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    unsigned int n; //змінна
+    int count = 0; //лічильник
+
+    printf("Введіть натуральне число n: ");
+    scanf("%u", &n);
+
+    // перевірка кожного числа від 1 до n-1
+    for (unsigned int m = 1; m < n; m++) {
+        if (n % m == n / m) {
+            count++;
+        }
+    }
+
+    printf("Кількість рівних дільників числа %u: %d\n", n, count);
+
+    return 0;
+}
